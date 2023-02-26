@@ -23,7 +23,12 @@
     
  # Black Arch Setup
  
- sudo pacman -S archlinux-keyring
- sudo pacman -s gnu-netcat
- sudo pacman -Syu
+ sudo pacman -S archlinux-keyring <br/>
+ sudo pacman -s gnu-netcat  <br/>
+ sudo pacman -Syu  <br/>
+ 
+ sudo pacman -Rcns removes package and its dependencies as well. <br/>
+ openbsd-netcat and gnu-netcat conflict - one of the repos doesn't have this conflict (openbsd-netcat), chose to install from that repo. 
+- Remove all packages with -Rcns that have conflits with the incoming packages. 
+
  
