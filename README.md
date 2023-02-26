@@ -31,4 +31,7 @@
  openbsd-netcat and gnu-netcat conflict - one of the repos doesn't have this conflict (openbsd-netcat), chose to install from that repo. 
 - Remove all packages with -Rcns that have conflits with the incoming packages. 
 
- 
+# tor
+sudo pacman -S tor <br/>
+sudo systemctl start/enable tor
+- Change networkmanagers and dns config to use 127.0.0.1:9050 (or tell firefox to use this address as a proxy for just firefox tor) 
