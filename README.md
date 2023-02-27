@@ -31,6 +31,7 @@
  sudo pacman -Rcns removes package and its dependencies as well. <br/>
  openbsd-netcat and gnu-netcat conflict - one of the repos doesn't have this conflict (openbsd-netcat), chose to install from that repo. 
 - Remove all packages with -Rcns that have conflits with the incoming packages. 
+- Use the --ignore flag for packages that can't be found
 
 # tor
 sudo pacman -S tor <br/>
