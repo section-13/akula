@@ -30,8 +30,8 @@
  ```
  
  --noconfirm flag defaults yes to eveything
- sudo pacman -Rcns removes package and its dependencies as well. <br/>
- openbsd-netcat and gnu-netcat conflict - one of the repos doesn't have this conflict (openbsd-netcat), chose to install from that repo. 
+ - sudo pacman -Rcns removes package and its dependencies as well. <br/>
+ - openbsd-netcat and gnu-netcat conflict - one of the repos doesn't have this conflict (openbsd-netcat), chose to install from that repo. 
 - Remove all packages with -Rcns that have conflits with the incoming packages. 
 - Use the --ignore flag for packages that can't be found
 - Mirrors are in /etc/pacman.d try different mirrors when some don't have required packages
