@@ -23,6 +23,7 @@
     
  # Black Arch Setup
  
+ sudo pacman -Sy <- must do this first before installing the keyring
  sudo pacman -S archlinux-keyring <br/>
  sudo pacman -s gnu-netcat  <br/>
  sudo pacman -Syu  <br/>
