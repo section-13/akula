@@ -18,16 +18,17 @@
 	- The UEFI Boot menu can be used to make arch grub the default again if it got displaced by Ubuntu
 	- Add this line at the end of /etc/default/grub: 
 		GRUB_DISABLE_OS_PROBER=false
-	- >>> sudo grub-mkconfig -o /boot/grub/grub.cfg
+	- sudo grub-mkconfig -o /boot/grub/grub.cfg
 		- Ubuntu should now be detected by Grub and added to the OS menu!
     
  # Black Arch Setup
  
  sudo pacman -Sy <- must do this first before installing the keyring
  sudo pacman -S archlinux-keyring <br/>
- sudo pacman -s gnu-netcat  <br/>
- sudo pacman -Syu  <br/>
+ sudo pacman -S gnu-netcat  <br/>
+ sudo pacman -S blackarch <br/>
  
+ --noconfirm flag defaults yes to eveything
  sudo pacman -Rcns removes package and its dependencies as well. <br/>
  openbsd-netcat and gnu-netcat conflict - one of the repos doesn't have this conflict (openbsd-netcat), chose to install from that repo. 
 - Remove all packages with -Rcns that have conflits with the incoming packages. 
