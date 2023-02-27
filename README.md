@@ -42,16 +42,8 @@
 - Remove all packages with -Rcns that have conflits with the incoming packages. 
 - Use the --ignore flag for packages that can't be found
 - Mirrors are in /etc/pacman.d try different mirrors when some don't have required packages
-
-Keyring permission problems: <br/>
-```
-pacman-key --init
-pacman-key --populate archlinux
-pacman-key --refresh-keys
-```
-- If some packages don't work with the regular install, install them separately. 
 - To skip installing a package: ^[package number] will exclude that package from install. 
-- the --overwrite '*' flag will overwrite packages that are existing if they conflict 
+- the --overwrite '*' flag will overwrite packages that are existing if they conflict <- danger this may break the system
 
 # tor
 sudo pacman -S tor <br/>
