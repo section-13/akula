@@ -35,6 +35,10 @@
 - Use the --ignore flag for packages that can't be found
 - Mirrors are in /etc/pacman.d try different mirrors when some don't have required packages
 
+Keyring permission problems: 
+pacman-key --init
+pacman-key --populate archlinux
+
 # tor
 sudo pacman -S tor <br/>
 sudo systemctl start/enable tor
