@@ -22,11 +22,12 @@
 		- Ubuntu should now be detected by Grub and added to the OS menu!
     
  # Black Arch Setup
- 
+ ```
  sudo pacman -Sy <- must do this first before installing the keyring
  sudo pacman -S archlinux-keyring <br/>
  sudo pacman -S gnu-netcat  <br/>
  sudo pacman -S blackarch <br/>
+ ```
  
  --noconfirm flag defaults yes to eveything
  sudo pacman -Rcns removes package and its dependencies as well. <br/>
@@ -35,9 +36,11 @@
 - Use the --ignore flag for packages that can't be found
 - Mirrors are in /etc/pacman.d try different mirrors when some don't have required packages
 
-Keyring permission problems: 
+Keyring permission problems: <br/>
+```
 pacman-key --init
 pacman-key --populate archlinux
+```
 
 # tor
 sudo pacman -S tor <br/>
