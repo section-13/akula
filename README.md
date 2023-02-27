@@ -40,7 +40,11 @@ Keyring permission problems: <br/>
 ```
 pacman-key --init
 pacman-key --populate archlinux
+pacman-key --refresh-keys
 ```
+- If some packages don't work with the regular install, install them separately. 
+- To skip installing a package: ^[package number] will exclude that package from install. 
+- the --overwrite flag [glob] will overwrite packages that are existing if they conflict 
 
 # tor
 sudo pacman -S tor <br/>
