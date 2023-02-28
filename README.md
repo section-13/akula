@@ -17,9 +17,15 @@
 	- May need to use F12 Boot Menu to select the UEFI Arch Option. 
 	- The UEFI Boot menu can be used to make arch grub the default again if it got displaced by Ubuntu
 	- Add this line at the end of /etc/default/grub: 
+	```
 		GRUB_DISABLE_OS_PROBER=false
-	- sudo grub-mkconfig -o /boot/grub/grub.cfg
-		- Ubuntu should now be detected by Grub and added to the OS menu!
+	```
+	Then run: 
+
+	```
+	sudo grub-mkconfig -o /boot/grub/grub.cfg
+	```
+	Ubuntu should now be detected by Grub and added to the OS menu!
     
  # Black Arch Setup
  ```
