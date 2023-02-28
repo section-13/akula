@@ -45,6 +45,25 @@
 - To skip installing a package: ^[package number] will exclude that package from install. 
 - the --overwrite '*' flag will overwrite packages that are existing if they conflict <- danger this may break the system
 
+# Reinstall Grub
+
+Mount LUKS partition
+```
+sudo cryptsetup luksOpen /dev/sda2/ my_vol
+sudo mount /dev/mapper/my_vol /mnt
+```
+chroot
+```
+sudo arch-chroot /mnt
+```
+Mount fs and install 
+```
+sudo mount /dev/sdaX /boot/efi/
+grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
+```
+
+
+
 # tor
 sudo pacman -S tor <br/>
 sudo systemctl start/enable tor
