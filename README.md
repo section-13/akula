@@ -112,9 +112,9 @@ sudo chroot . /bin/bash
 ```
 3. Run the backup script
 
-> Restoring
+## Restoring
 To restore from a previous backup, mount all relevant partitions, change the current working directory to the root directory, and execute
-
+```
 $ bsdtar --acls --xattrs -xpzf backupfile
-
+```
 replacing backupfile with the backup archive. Removing all files that had been added since the backup was made must be done manually. Recreating the filesystem(s) is an easy way to do this. 
