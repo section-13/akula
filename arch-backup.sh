@@ -6,7 +6,7 @@ backdest=/opt/backup
 
 # Labels for backup name
 #PC=${HOSTNAME}
-pc=pavilion
+pc=akula
 distro=arch
 type=full
 date=$(date "+%F")
