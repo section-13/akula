@@ -71,9 +71,36 @@ sudo mount /dev/sdaX /boot/efi/
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
 ```
 
-
-
 # tor
 sudo pacman -S tor <br/>
 sudo systemctl start/enable tor
 - Change networkmanagers and dns config to use 127.0.0.1:9050 (or tell firefox to use this address as a proxy for just firefox tor) 
+
+# Encrypting External Drives
+Destroy the drive's partition table by overwriting the drive's head with zeros:
+```
+lsblk
+sudo dd if=/dev/zero of=/dev/sdX count=4096
+sudo cryptsetup luksFormat /dev/sdX
+```
+To Mount LUKS: 
+```
+cryptsetup open /dev/sdX [drive name (any)]
+ls /dev/mapper  # To check the drive was mounted
+cryptsetup close [drive name] # To close the drive
+```
+Make fs on drive: 
+```
+sudo mkfs -t ext4 [device name] /dev/mapper/[drive name]
+
+```
+Mount / Unmount LUKS: 
+```
+sudo cryptsetup open /dev/sdX vaultdrive
+sudo mount /dev/mapper/vaultdrive /mnt/hd
+```
+
+
+
+```
+
