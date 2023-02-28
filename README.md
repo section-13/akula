@@ -91,16 +91,12 @@ cryptsetup close [drive name] # To close the drive
 ```
 Make fs on drive: 
 ```
-sudo mkfs -t ext4 [device name] /dev/mapper/[drive name]
+sudo mkfs -t ext4 /dev/mapper/[drive name]
 
 ```
 Mount / Unmount LUKS: 
 ```
 sudo cryptsetup open /dev/sdX vaultdrive
 sudo mount /dev/mapper/vaultdrive /mnt/hd
-```
-
-
-
 ```
 
