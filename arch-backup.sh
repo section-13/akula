@@ -34,6 +34,6 @@ if [ $executeback = "y" ]; then
   # It is safe to remove the verbose (-v) flag. If you are using a 
   # slow terminal, this can greatly speed up the backup process.
   # Use bsdtar because GNU tar will not preserve extended attributes.
-  bsdtar --exclude '/mnt/*' --acls --xattrs -cpvzf $backupfile / 
+  bsdtar --exclude '/var/cache/pacman/pkg' --exclude '/mnt/*' --acls --xattrs -cpzf $backupfile /
   # --exclude-from=$exclude_file 
 fi
