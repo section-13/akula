@@ -14,8 +14,8 @@ backupfile="$backdest/$distro-$type-$date.tar.gz"
 
 # Exclude file location
 prog=${0##*/} # Program name from filename
-excdir="/home/<user>/.bin/root/backup"
-exclude_file="$excdir/$prog-exc.txt"
+#excdir="/home/skipper/.bin/root/backup"
+#exclude_file="$excdir/$prog-exc.txt"
 
 # Check if chrooted prompt.
 echo -n "First chroot from a LiveCD.  Are you ready to backup? (y/n): "
@@ -34,5 +34,6 @@ if [ $executeback = "y" ]; then
   # It is safe to remove the verbose (-v) flag. If you are using a 
   # slow terminal, this can greatly speed up the backup process.
   # Use bsdtar because GNU tar will not preserve extended attributes.
-  bsdtar --exclude-from=$exclude_file --acls --xattrs -cpvzf $backupfile /
+  bsdtar --acls --xattrs -cpvzf $backupfile / 
+  # --exclude-from=$exclude_file 
 fi
