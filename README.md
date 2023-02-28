@@ -35,6 +35,9 @@
  sudo pacman -S blackarch 
  ```
  If a package sig is failing, download it individually and install it individually. 
+ ```
+ sudo pacman -U [downloaded package]
+ ```
  
  --noconfirm flag defaults yes to eveything
  - sudo pacman -Rcns removes package and its dependencies as well. <br/>
