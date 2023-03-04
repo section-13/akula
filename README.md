@@ -74,7 +74,7 @@ grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
 # tor
 sudo pacman -S tor <br/>
 sudo systemctl start/enable tor
-- Change networkmanagers and dns config to use 127.0.0.1:9050 (or tell firefox to use this address as a proxy for just firefox tor) 
+- Change networkmanagers and dns config to use 127.0.0.1:9050 (or tell firefox to use this address as a SOCKS proxy for just firefox tor) 
 
 # Encrypting External Drives
 Destroy the drive's partition table by overwriting the drive's head with zeros:
