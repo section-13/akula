@@ -140,3 +140,10 @@ Note the keyslot after the first command:
 sudo cryptsetup --verbose open --test-passphrase /dev/sda1
 sudo cryptsetup luksChangeKey /dev/sda1 -S [keyslot]
 ```
+# Installing frrm AUR
+Example Brave 
+```
+git clone https://aur.archlinux.org/brave-bin.git
+cd brave-bin
+makepkg -si
+```
