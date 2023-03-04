@@ -93,6 +93,7 @@ Make fs on drive:
 ```
 sudo mkfs -t ext4 /dev/mapper/[drive name]
 
+
 ```
 Mount / Unmount LUKS: 
 ```
@@ -118,3 +119,14 @@ To restore from a previous backup, mount all relevant partitions, change the cur
 $ bsdtar --acls --xattrs -xpzf backupfile
 ```
 replacing backupfile with the backup archive. Removing all files that had been added since the backup was made must be done manually. Recreating the filesystem(s) is an easy way to do this. 
+
+# Encrypt Home Drive (Ubuntu or if entire disk is not Encrypted) 
+1. Create New User
+2. Login to new user and run
+```
+sudo ecryptfs-migrate-home -u <user1>
+```
+3. Login to old user and get the passphrase (no rebooting before this)
+```
+ecryptfs-unwrap-passphrase
+```
