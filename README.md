@@ -121,6 +121,9 @@ $ bsdtar --acls --xattrs -xpzf backupfile
 replacing backupfile with the backup archive. Removing all files that had been added since the backup was made must be done manually. Recreating the filesystem(s) is an easy way to do this. 
 
 # Encrypt Home Drive (Ubuntu or if entire disk is not Encrypted) 
+```
+sudo apt install ecryptfs-utils cryptsetup
+```
 1. Create New User
 2. Login to new user and run
 ```
