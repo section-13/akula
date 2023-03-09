@@ -109,6 +109,7 @@ sudo cryptsetup open /dev/sda1 dr
 sudo mount /dev/mapper/dr /mnt/arch
 sudo mount /dev/sda2 /mnt/arch/boot/efi
 cd /mnt/arch
+// Here mount the backup drive onto /mnt/arch/mnt/extd
 sudo chroot . /bin/bash
 ```
 3. Run the backup script
