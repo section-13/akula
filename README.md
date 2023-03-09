@@ -148,7 +148,8 @@ cd brave-bin
 makepkg -si
 ```
 # Location Security
-Mask Geoclue
+1. Mask Geoclue
 ```
 sudo systemctl mask geoclue
 ```
+2. Stop WLAN scanning (see network section)
