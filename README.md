@@ -100,7 +100,7 @@ Mount / Unmount LUKS:
 sudo cryptsetup open /dev/sdX vaultdrive
 sudo mount /dev/mapper/vaultdrive /mnt/hd
 ```
-# Arch Backup with Tar
+# Backup
 1. Boot from live CD
 2. chroot
 ```
