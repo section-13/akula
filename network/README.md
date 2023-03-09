@@ -35,11 +35,9 @@ sudo iwlist scanning
 Edit /etc/NetworkManager/system-connections/[network-name]
 ```
 [wifi]
-bssid=92:07:4F:2A:5E:49 # your bssid (AP MAC Address)
+bssid=92:07:4F:2A:5E:49 # your bssid
 mac-address-blacklist=
-mac-address-randomization=0
 mode=infrastructure
 seen-bssids=92:07:4F:2A:5E:49; # still your bssid
-ssid=FQCODEL
-
+ssid=Heronnet
 ```
