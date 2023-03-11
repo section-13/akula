@@ -49,6 +49,7 @@ about:config
 webgl.disabled
 ```
 ## Enable Fingerprinting Protection
+Note: This one causes white flashes while running the browser in dark mode
 ```
 about:config
 privacy.resistFingerprinting
