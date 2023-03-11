@@ -74,7 +74,7 @@ grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
 # tor
 sudo pacman -S tor <br/>
 sudo systemctl start/enable tor
-- Change networkmanagers and dns config to use 127.0.0.1:9050 (or tell firefox to use this address as a proxy for just firefox tor) 
+- Change networkmanagers and dns config to use 127.0.0.1:9050 (or tell firefox to use this address as a SOCKS proxy for just firefox tor) 
 
 # Encrypting External Drives
 Destroy the drive's partition table by overwriting the drive's head with zeros:
@@ -100,7 +100,7 @@ Mount / Unmount LUKS:
 sudo cryptsetup open /dev/sdX vaultdrive
 sudo mount /dev/mapper/vaultdrive /mnt/hd
 ```
-# Arch Backup with Tar
+# Backup
 1. Boot from live CD
 2. chroot
 ```
@@ -109,6 +109,7 @@ sudo cryptsetup open /dev/sda1 dr
 sudo mount /dev/mapper/dr /mnt/arch
 sudo mount /dev/sda2 /mnt/arch/boot/efi
 cd /mnt/arch
+// Here mount the backup drive onto /mnt/arch/mnt/extd
 sudo chroot . /bin/bash
 ```
 3. Run the backup script
@@ -140,3 +141,16 @@ Note the keyslot after the first command:
 sudo cryptsetup --verbose open --test-passphrase /dev/sda1
 sudo cryptsetup luksChangeKey /dev/sda1 -S [keyslot]
 ```
+# Installing from AUR
+Example Brave 
+```
+git clone https://aur.archlinux.org/brave-bin.git
+cd brave-bin
+makepkg -si
+```
+# Location Security
+1. Mask Geoclue
+```
+sudo systemctl mask geoclue
+```
+2. Stop WLAN scanning (see network section)

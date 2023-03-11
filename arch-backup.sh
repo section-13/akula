@@ -2,7 +2,7 @@
 # full system backup
 
 # Backup destination
-backdest=/opt/backup
+backdest=/mnt/extd/akula
 
 # Labels for backup name
 #PC=${HOSTNAME}
