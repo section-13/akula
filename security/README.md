@@ -5,20 +5,7 @@ sudo systemctl mask geoclue
 ```
 2. Stop WLAN scanning (see network section)
 
-# Disable Camera
-```
-# Once
-sudo modprobe -r uvcvideo
-
-# All
-cd /etc/modprobe.d
-echo "blacklist uvcvideo" > nocamera.conf"
-
-# View modules
-lsmod
-```
-
-# MAC Address Randomization
+## MAC Address Randomization
 ```
 # Add to /etc/NetworkManager/NetworkManager.conf
 # Configuration file for NetworkManager.
@@ -66,4 +53,17 @@ webgl.disabled
 about:config
 privacy.resistFingerprinting
 privacy.resistFingerprinting.block_mozAddonManager
+```
+
+# Disable Camera
+```
+# Once
+sudo modprobe -r uvcvideo
+
+# All
+cd /etc/modprobe.d
+echo "blacklist uvcvideo" > nocamera.conf"
+
+# View modules
+lsmod
 ```
