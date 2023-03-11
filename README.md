@@ -154,3 +154,16 @@ makepkg -si
 sudo systemctl mask geoclue
 ```
 2. Stop WLAN scanning (see network section)
+
+# Disable Camera
+```
+# Once
+sudo modprobe -r uvcvideo
+
+# All
+cd /etc/modprobe.d
+echo "blacklist uvcvideo" > nocamera.conf"
+
+# View modules
+lsmod
+```
