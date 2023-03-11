@@ -31,3 +31,9 @@ WebRTC in Firefox
 about:config
 webgl.disabled
 ```
+## Enable Fingerprinting Protection
+```
+about:config
+privacy.resistFingerprinting
+privacy.resistFingerprinting.block_mozAddonManager
+```
