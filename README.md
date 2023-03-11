@@ -148,22 +148,3 @@ git clone https://aur.archlinux.org/brave-bin.git
 cd brave-bin
 makepkg -si
 ```
-# Location Security
-1. Mask Geoclue
-```
-sudo systemctl mask geoclue
-```
-2. Stop WLAN scanning (see network section)
-
-# Disable Camera
-```
-# Once
-sudo modprobe -r uvcvideo
-
-# All
-cd /etc/modprobe.d
-echo "blacklist uvcvideo" > nocamera.conf"
-
-# View modules
-lsmod
-```
